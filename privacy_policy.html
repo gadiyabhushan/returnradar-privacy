@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReturnRadar — Privacy Policy</title>
+  <style>
+    :root { --bg: #0f1219; --card: #1a1f2e; --text: #e2e8f0; --muted: #94a3b8; --accent: #007185; --border: #2d3748; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; padding: 40px 20px; }
+    .container { max-width: 720px; margin: 0 auto; }
+    h1 { font-size: 28px; margin-bottom: 8px; color: #fff; }
+    .subtitle { color: var(--muted); font-size: 14px; margin-bottom: 32px; }
+    h2 { font-size: 18px; margin: 28px 0 12px; color: var(--accent); }
+    p, li { font-size: 15px; color: var(--text); margin-bottom: 12px; }
+    ul { padding-left: 24px; }
+    li { margin-bottom: 6px; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+    .highlight { color: #10b981; font-weight: 600; }
+    a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🛡️ ReturnRadar — Privacy Policy</h1>
+    <p class="subtitle">Last updated: May 2026</p>
+
+    <div class="card">
+      <h2>What This Extension Does</h2>
+      <p>ReturnRadar is a browser extension that displays return policy information (Returnable, Replacement, Non-Returnable) on Amazon product search results. It helps shoppers make informed purchase decisions without clicking into every product page.</p>
+    </div>
+
+    <div class="card">
+      <h2>Data We Collect</h2>
+      <p class="highlight">We do NOT collect any personal information.</p>
+      <p>The extension processes the following non-personal data:</p>
+      <ul>
+        <li><strong>Amazon Product IDs (ASINs)</strong> — Used solely to look up and cache return policy status for products you view.</li>
+        <li><strong>Return Policy Text</strong> — Extracted from Amazon product pages to determine returnability.</li>
+        <li><strong>User Preferences</strong> — Your extension settings (e.g., tooltip toggle, filter preferences) stored locally on your device.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Data Storage</h2>
+      <p>All data is stored <strong>locally on your device</strong> using the browser's built-in <code>chrome.storage.local</code> API. Cached product data automatically expires after 24 hours.</p>
+      <p>If the optional cloud cache feature is enabled, anonymised product return policy data (ASIN + return status only) may be stored on our Supabase servers to speed up lookups for all users. <strong>No personal data, browsing history, or account information is ever transmitted.</strong></p>
+    </div>
+
+    <div class="card">
+      <h2>Network Requests</h2>
+      <p>The extension makes the following network requests:</p>
+      <ul>
+        <li><strong>Amazon product pages</strong> (same-origin) — To fetch return policy information for products visible in your search results.</li>
+        <li><strong>Supabase API</strong> (optional) — To read/write anonymised product return policy cache data. This can be disabled in settings.</li>
+      </ul>
+      <p>No data is sent to any analytics, advertising, or tracking services.</p>
+    </div>
+
+    <div class="card">
+      <h2>Permissions Explained</h2>
+      <ul>
+        <li><strong>storage</strong> — Saves cached return policies and your preference settings locally.</li>
+        <li><strong>host_permissions (amazon.*)</strong> — Allows the extension to read Amazon product pages to extract return policy information. This is the core functionality of the extension.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Third-Party Services</h2>
+      <p>The extension does not use any third-party analytics, advertising, or tracking services. The optional cloud cache uses <a href="https://supabase.com" target="_blank" rel="noopener">Supabase</a> for anonymous product data storage only.</p>
+    </div>
+
+    <div class="card">
+      <h2>Your Rights</h2>
+      <ul>
+        <li>You can disable the extension at any time from Chrome's extension manager.</li>
+        <li>You can clear all cached data by removing the extension.</li>
+        <li>You can disable cloud cache sync in the extension settings.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Contact</h2>
+      <p>If you have questions about this privacy policy, please contact us through the Chrome Web Store support page for this extension.</p>
+    </div>
+  </div>
+</body>
+</html>
